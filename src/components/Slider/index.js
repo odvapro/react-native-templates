@@ -17,7 +17,7 @@ const Slider = ({
 	onSlidePress,
 	containerStyle,
 	sliderStyle,
-	dotsContainer,
+	dotsContainerStyle,
 	dotsStyle,
 	currentDotsStyle,
 }) => {
@@ -91,7 +91,7 @@ const Slider = ({
 				{slides.map(renderItem)}
 			</ScrollView>
 			{slides.length > 1 && (
-				<View style={[styles.paginationWrapper, dotsContainer]}>
+				<View style={[styles.paginationWrapper, dotsContainerStyle]}>
 					{slides.map(renderDots)}
 				</View>
 			)}
