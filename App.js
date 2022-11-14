@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
-import { Alert, SafeAreaView, ScrollView, Text } from 'react-native';
-import CheckBox from './src/components/CheckBox';
-import Input from './src/components/Input';
+import React from 'react';
+import { SafeAreaView, ScrollView } from 'react-native';
+import Rating from './src/components/Rating';
 
 import style from './style';
 
@@ -9,7 +8,7 @@ const App = () => {
 	return (
 		<SafeAreaView>
 			<ScrollView style={style.wrapper}>
-				<Input />
+				<Rating />
 			</ScrollView>
 		</SafeAreaView>
 	);

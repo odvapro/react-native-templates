@@ -4,13 +4,13 @@ import styles from './style';
 import Svg, { Defs, LinearGradient, Stop, Path } from 'react-native-svg';
 
 const Rating = ({
-	rating = 0,
+	rating = 1,
 	readonly = false,
 	starsCount = 5,
 	starSize = { width: '26', height: '24' },
 	fillColor = '#DE1212',
 	color = '#C9C9C9',
-	style,
+	styleContainer,
 	onRatingChange,
 }) => {
 	const stars = new Array(starsCount).fill(null);
@@ -76,7 +76,7 @@ const Rating = ({
 	};
 
 	return (
-		<View style={{ ...styles.wrapper, ...style }}>
+		<View style={{ ...styles.wrapper, ...styleContainer }}>
 			{stars.map(renderStar)}
 		</View>
 	);
