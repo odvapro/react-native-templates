@@ -3,7 +3,14 @@ import { View, TouchableOpacity, Text } from 'react-native';
 import styles from './styles';
 import { Minus, Plus } from '../../svg';
 
-const Stepper = ({ onDecrement, onIncrement, stepper = 1, style }) => {
+const Stepper = ({
+	onDecrement,
+	onIncrement,
+	stepper = 2,
+	containerStyle,
+	btnMinusStyle,
+	btnPlusStyle,
+}) => {
 	const [currentStepper, setCurrentStepper] = useState(stepper);
 
 	useEffect(() => {
@@ -22,9 +29,9 @@ const Stepper = ({ onDecrement, onIncrement, stepper = 1, style }) => {
 	};
 
 	return (
-		<View style={{ ...styles.container, ...style }}>
+		<View style={{ ...styles.container, ...containerStyle }}>
 			<TouchableOpacity
-				style={styles.btn}
+				style={[styles.btn, btnMinusStyle]}
 				activeOpacity={0.6}
 				onPress={currentStepper > 1 ? decrement : null}
 			>
@@ -34,7 +41,7 @@ const Stepper = ({ onDecrement, onIncrement, stepper = 1, style }) => {
 			<Text style={styles.text}>{`${currentStepper}`}</Text>
 
 			<TouchableOpacity
-				style={styles.btn}
+				style={[styles.btn, btnPlusStyle]}
 				activeOpacity={0.6}
 				onPress={increment}
 			>
