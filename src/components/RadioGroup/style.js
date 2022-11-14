@@ -8,8 +8,6 @@ export default StyleSheet.create({
 	btnWrapper: {
 		flexDirection: 'row',
 		alignItems: 'center',
-		borderWidth: 1,
-		borderColor: '#EAEAEA',
 		borderRadius: 4,
 		paddingVertical: 12,
 		paddingHorizontal: 5,
@@ -19,6 +17,9 @@ export default StyleSheet.create({
 	},
 	marginTop: {
 		marginTop: 12,
+	},
+	disabled: {
+		opacity: 0.5,
 	},
 	content: {
 		flexDirection: 'row',

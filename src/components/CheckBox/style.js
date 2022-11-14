@@ -1,19 +1,24 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-	container: {},
-	wrapper: {
-		flexDirection: 'row',
-		alignItems: 'center',
-	},
 	btn: {
+		width: 50,
+		height: 50,
 		flexDirection: 'row',
 		alignItems: 'center',
+		marginBottom: 10,
+		borderColor: 'black',
+		borderWidth: 1,
+		borderRadius: 8,
+	},
+	borderNone: {
+		borderWidth: 0,
+		borderColor: 'transparent',
 	},
 	checkBox: {
-		border: 'red',
-		borderWidth: 1,
-		borderRadius: 5,
+		width: '100%',
+		height: '100%',
+		borderRadius: 7,
 	},
 	title: {
 		marginLeft: 8,
@@ -27,6 +32,8 @@ export default StyleSheet.create({
 	},
 	activeCheckedStyle: {
 		color: '#000',
+		borderWidth: 0,
+		borderRadius: 5,
 	},
 	disabledCheckedStyle: {
 		color: 'transparent',

@@ -5,14 +5,16 @@ import styles from './style';
 
 const CheckBox = ({
 	title,
-	checked,
+	checked = false,
+	disabled = false,
+	svhIcon,
+	onPressChecked,
+	onPressNotChecked,
 	activeCheckedStyle,
-	disabledCheckedStyle,
+	// disabledCheckedStyle,
 	checkboxInnerStyle,
 	checkboxStyle,
-	onPress,
-	containerStyle,
-	svhIcon,
+	titleStyle,
 }) => {
 	const [isChecked, setIsChecked] = useState(checked);
 
@@ -20,33 +22,38 @@ const CheckBox = ({
 
 	const checkboxStatusStyles = isChecked
 		? [styles.activeCheckedStyle, activeCheckedStyle]
-		: [styles.disabledCheckedStyle, disabledCheckedStyle];
+		: [styles.disabledCheckedStyle, checkboxStyle];
+
+	const border = isChecked ? styles.borderNone : {};
 
 	const onCheckedPress = () => {
 		setIsChecked(!isChecked);
 
-		if (onPress) onPress();
+		if (isChecked && onPressChecked) {
+			onPressChecked();
+		} else if (!isChecked && onPressNotChecked) {
+			onPressNotChecked();
+		}
 	};
 
 	return (
-		<View style={{ ...styles.container, ...containerStyle }}>
-			<TouchableOpacity
-				style={[styles.btn, checkboxInnerStyle]}
-				activeOpacity={0.7}
-				onPress={onCheckedPress}
-			>
+		<TouchableOpacity
+			style={[styles.btn, checkboxInnerStyle, border]}
+			activeOpacity={0.7}
+			onPress={onCheckedPress}
+			disabled={disabled}
+		>
+			{isChecked && (
 				<SVG
-					style={[
-						styles.checkBox,
-						checkboxStyle,
-						checkboxStatusStyles,
-					]}
+					width={'100%'}
+					height={'100%'}
+					style={[styles.checkBox, checkboxStatusStyles]}
 				/>
-				<Text style={styles.title} onPress={onPress}>
-					{title}
-				</Text>
-			</TouchableOpacity>
-		</View>
+			)}
+			<Text style={[styles.title, titleStyle]} onPress={onCheckedPress}>
+				{title}
+			</Text>
+		</TouchableOpacity>
 	);
 };
 

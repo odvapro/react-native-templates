@@ -5,7 +5,7 @@ export default StyleSheet.create({
 		paddingTop: 20,
 		height: '100%',
 		paddingHorizontal: 20,
-		backgroundColor: '#0005',
+		backgroundColor: 'gray',
 	},
 	title: {
 		textAlign: 'center',

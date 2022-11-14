@@ -8,7 +8,14 @@ const RadioGroup = ({
 	data = [],
 	currentOption = 0,
 	onSelectOption,
-	style,
+	radioColor = '#EAEAEA',
+	radioActiveColor = '#DE1212',
+	radioStyle,
+	containerStyle,
+	radioContainerStyle,
+	textContainerStyle,
+	titleStyle,
+	descriptionStyle,
 }) => {
 	const [currentOptionId, setCurrentOptionId] = useState(currentOption);
 
@@ -24,22 +31,33 @@ const RadioGroup = ({
 
 		return (
 			<TouchableOpacity
-				style={[styles.btnWrapper, idx > 0 && styles.marginTop]}
+				style={[
+					styles.btnWrapper,
+					radioContainerStyle,
+					idx > 0 && styles.marginTop,
+					el.disabled && styles.disabled,
+				]}
 				key={`rBtn${el.id}${idx}`}
 				activeOpacity={0.7}
 				onPress={onSelect}
 				disabled={el.disabled}
 			>
 				<RadioBtnSvg
-					color={currentOptionId == el.id ? '#DE1212' : '#EAEAEA'}
-					style={styles.radioSvg}
+					color={
+						currentOptionId == el.id ? radioActiveColor : radioColor
+					}
+					style={[styles.radioSvg, radioStyle]}
 				/>
 				<View style={styles.content}>
 					{!!el?.svg && <SvgXml style={styles.svg} xml={el?.svg} />}
-					<View style={textContentStyle}>
-						<Text style={styles.title}>{el.title}</Text>
+					<View style={[textContentStyle, textContainerStyle]}>
+						<Text style={[styles.title, titleStyle]}>
+							{el.title}
+						</Text>
 						{!!el.description && (
-							<Text style={styles.description}>
+							<Text
+								style={[styles.description, descriptionStyle]}
+							>
 								{el.description}
 							</Text>
 						)}
@@ -50,7 +68,9 @@ const RadioGroup = ({
 	};
 
 	return (
-		<View style={[styles.container, style]}>{data.map(renderOption)}</View>
+		<View style={[styles.container, containerStyle]}>
+			{data.map(renderOption)}
+		</View>
 	);
 };
 
