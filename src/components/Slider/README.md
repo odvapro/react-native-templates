@@ -1,4 +1,4 @@
-# Accordion
+# Slider
 
 | IOS | Android |
 | --- | ------- |
@@ -9,29 +9,27 @@
 ```jsx
 <Slider
   //массив ссылок изображений
-  slides={['path', 'path']} // => required
+  slides={['path', 'path']} // => required (array)
 
   // активный слайд во время запуска
-  currentSlide={1} // => optional
+  currentSlide={1} // => optional (number)
 
-  // функция которая отработает при клике на слайд
-  onSlidePress={ // => optional
-    () => Alert.alert('Отработала функция при клике на слайд')
-  }
+  // функция которая отработает при клике на слайд 
+  onSlidePress={function} // => optional (function)
 
   // объект стилей для контейнера
-  containerStyle={objStyle} // => optional
+  containerStyle={objStyle} // => optional (obj)
 
   // объект стилей contentContainerStyle для ScrollView
-  sliderStyle={objStyle} // => optional
+  sliderStyle={objStyle} // => optional (obj)
 
   // объект стилей для контейнера dots-ов
-  dotsContainerStyle={objStyle} // => optional
+  dotsContainerStyle={objStyle} // => optional (obj)
   
   // объект стилей для dots-ов
-  dotsStyle={objStyle} // => optional
+  dotsStyle={objStyle} // => optional (obj)
 
-  // объект стилей для активного dots-а
-  currentDotsStyle={objStyle} // => optional
+  // объект стилей для активного dots-а 
+  currentDotsStyle={objStyle} // => optional (obj)
 />
 ```

@@ -1,4 +1,4 @@
-# Button
+# CheckBox
 
 | IOS | Android |
 | --- | ------- |
