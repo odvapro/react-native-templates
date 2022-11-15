@@ -11,4 +11,8 @@ export default StyleSheet.create({
 		bottom: 0,
 		top: 0,
 	},
+	img: {
+		width: '100%',
+		height: 300,
+	},
 });

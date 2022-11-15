@@ -11,47 +11,47 @@
 
 <InputText
   // Текст который будет по умолчания при запуске приложения
-  value={'Hello World'} // => optional (string)
+  value={'Hello World'} // => String (optional)
 
   // Если false текст недоступен для редактирования. Значение по умолчанию равно true.
-  editable={true} // => optional (bool)
+  editable={true} // => Boolean (optional)
 
   // Строка, которая будет отображаться перед вводом текста
-  placeholder={'Введите текст'} // => optional (string)
+  placeholder={'Введите текст'} // => String (optional)
 
   // Цвет placeholder текста
-  placeholderTextColor={'#000'} // => optional (string)
+  placeholderTextColor={'#000'} // => String (optional)
 
   // Функция которая будет вызываться при вводе текста
-  onChange={function} // => optional (function)
+  onChange={function} // => Function (optional)
 
   // Функция которая будет вызываться при фокусе поля ввода
-  onFocus={function} // => optional (function)
+  onFocus={function} // => Function (optional)
 
   // Функция которая будет вызываться при потере фокуса с поля ввода
-  onBlur={function} // => optional (function)
+  onBlur={function} // => Function (optional)
 
   // Текст ошибки
-  error={'Ошибка'} // => => optional (string)
+  error={'Ошибка'} // => String (optional)
 
   // Объект стилей для текста ошибки
-  errorStyle={objStyle} // => optional (obj)
+  errorStyle={objStyle} // => Object (optional)
 
   // Текст для доп. информации
-  prompt={'Доп информация'} // => => optional (string)
+  prompt={'Доп информация'} // => String (optional)
 
   // Объект стилей для доп. информации
-  promptStyle={objStyle} // => optional (obj)
+  promptStyle={objStyle} // => Object (optional)
 
   // Svg иконка
-  RightIcon={SVG} // => optional (jsx)
+  RightIcon={SVG} // => Jsx (optional)
 
   // Объект стилей для svg иконки
-  styleRightIcon={objStyle} // => optional (obj)
+  styleRightIcon={objStyle} // => Object (optional)
 
   // Объект стилей блока обертки
-  inputWrapperStyle={objStyle} // => optional (obj)
+  inputWrapperStyle={objStyle} // => Object (optional)
   
   // Объект стилей поля ввода
-  inputStyle={objStyle} // => optional (obj)
+  inputStyle={objStyle} // => Object (optional)
 />

@@ -1,11 +1,8 @@
 # Timer
 
-<div>
-<p>IOS</p>
-	<img src="./screenshots/ios timer.png" alt="ios timer" width="325">
-<p>Android</p>
-	<img src="./screenshots/android timer.png" alt="android timer" width="325">
-</div>
+| IOS | Android |
+| --- | ------- |
+| <img src="./screenshots/ios timer.png" alt="ios timer" width="325"> | <img src="./screenshots/android timer.png" alt="android timer" width="325"> |
 
 ## Примеры
  
@@ -31,57 +28,3 @@ return (
 		/>
 	</View>
 );
-```
-
-### Хук
-
-```jsx
-
-import { useEffect, useRef, useState } from 'react';
-
-const useTimer = (initialTime = 10) => {
-	const [time, setTime] = useState(initialTime);
-	const timer = useRef(null);
-	useEffect(() => {
-		startCountDown();
-		return () => {
-			clearInterval(timer?.current);
-		};
-	}, []);
-
-	const startCountDown = () => {
-		timer.current = setInterval(() => {
-			setTime(state => state - 1);
-		}, 1000);
-	};
-	useEffect(() => {
-		if (time === 0) {
-			clearTimer();
-		}
-	}, [time]);
-
-	const restartTimer = () => {
-		clearTimer();
-		setTime(initialTime);
-		startCountDown();
-	};
-
-	const convertSecondsToTime = seconds => {
-		const time = new Date(0);
-		time.setSeconds(+seconds);
-
-		return time.toISOString().substring(14, 19);
-	};
-
-	const clearTimer = () => {
-		clearInterval(timer?.current);
-		setTime(0);
-	};
-
-	return { time, restartTimer, convertSecondsToTime };
-};
-export default useTimer;
-
-
-```
-

@@ -27,14 +27,19 @@ const ProgressiveImage = props => {
 			<Animated.Image
 				{...props}
 				source={thumbnailSource}
-				style={[style, { opacity: thumbnailAnimated }]}
+				style={[styles.img, style, { opacity: thumbnailAnimated }]}
 				blurRadius={2}
 				onLoad={handleThumbnailLoad}
 			/>
 			<Animated.Image
 				{...props}
 				source={source}
-				style={[styles.imageOverlay, { opacity: imageAnimated }, style]}
+				style={[
+					styles.img,
+					styles.imageOverlay,
+					{ opacity: imageAnimated },
+					style,
+				]}
 				onLoad={onImageLoad}
 			/>
 		</View>
