@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 	title: {
 		fontSize: 16,
 		lineHeight: 36,
-		colors: '#000000',
+		color: '#000',
 	},
 	arrow: {
 		position: 'absolute',

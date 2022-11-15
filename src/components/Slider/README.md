@@ -9,27 +9,27 @@
 ```jsx
 <Slider
   //массив ссылок изображений
-  slides={['path', 'path']} // => required (array)
+  slides={['path', 'path']} // => Array (required)
 
   // активный слайд во время запуска
-  currentSlide={1} // => optional (number)
+  currentSlide={1} // => Number (optional)
 
   // функция которая отработает при клике на слайд 
-  onSlidePress={function} // => optional (function)
+  onSlidePress={function} // => Function (optional)
 
   // объект стилей для контейнера
-  containerStyle={objStyle} // => optional (obj)
+  containerStyle={objStyle} // => Object (optional)
 
   // объект стилей contentContainerStyle для ScrollView
-  sliderStyle={objStyle} // => optional (obj)
+  sliderStyle={objStyle} // => Object (optional)
 
   // объект стилей для контейнера dots-ов
-  dotsContainerStyle={objStyle} // => optional (obj)
+  dotsContainerStyle={objStyle} // => Object (optional)
   
   // объект стилей для dots-ов
-  dotsStyle={objStyle} // => optional (obj)
+  dotsStyle={objStyle} // => Object (optional)
 
   // объект стилей для активного dots-а 
-  currentDotsStyle={objStyle} // => optional (obj)
+  currentDotsStyle={objStyle} // => Object (optional)
 />
 ```

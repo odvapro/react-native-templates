@@ -18,8 +18,8 @@ if (
 	UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-const Accordion = ({ title = '', text = '', isOpen, style = {} }) => {
-	const [isShow, setIsShow] = useState(false);
+const Accordion = ({ title, text, isOpen = false, style = {} }) => {
+	const [isShow, setIsShow] = useState(isOpen);
 	const rotateAnim = useRef(new Animated.Value(0)).current;
 
 	const toggleContent = () => {
@@ -31,6 +31,12 @@ const Accordion = ({ title = '', text = '', isOpen, style = {} }) => {
 		});
 		setIsShow(old => !old);
 	};
+
+	useEffect(() => {
+		if (!title) throw new Error('Параметр title обязателен для заполнения');
+
+		if (!text) throw new Error('Параметр text обязателен для заполнения');
+	}, []);
 
 	useEffect(() => {
 		Animated.timing(rotateAnim, {
