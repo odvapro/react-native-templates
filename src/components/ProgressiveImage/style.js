@@ -12,7 +12,7 @@ export default StyleSheet.create({
 		top: 0,
 	},
 	img: {
-		width: '100%',
+		width: 300,
 		height: 300,
 	},
 });

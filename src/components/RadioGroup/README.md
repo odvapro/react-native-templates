@@ -21,32 +21,32 @@
   // }
   
   // Элемент который будет активен при запуске приложения
-  currentOption={2} // => optional (number)
+  currentOption={2} // => Number (optional)
 
   // Метод который отработает при клике на чекбокс
-  onSelectOption={() => {}} // => optional (function)
+  onSelectOption={() => {}} // => Function (optional)
 
   // Цвет обводки у радио кнопки
-  radioColor={'#EAEAEA'} // => optional (string)
+  radioColor={'#EAEAEA'} // => String (optional)
 
   // Цвет обводки у радио кнопки в состоянии active
-  radioActiveColor={'#DE1212'} // => optional (string)
+  radioActiveColor={'#DE1212'} // => String (optional)
 
   // Объект стилей для контейнера где находятся радио кнопки
-  containerStyle={objStyle} // => optional (obj)
+  containerStyle={objStyle} // => Object (optional)
 
   // Объект стилей для контейнера радио кнопки
-  radioContainerStyle={objStyle} // => optional (obj)
+  radioContainerStyle={objStyle} // => Object (optional)
 
   // Объект стилей для svg иконки у радио кнопки
-  radioStyle={objStyle} // => optional (obj)
+  radioStyle={objStyle} // => Object (optional)
 
   // Объект стилей для обертки текста
-  textContainerStyle={objStyle} // => optional (obj)
+  textContainerStyle={objStyle} // => Object (optional)
 
   // Объект стилей для заголовка
-  titleStyle={objStyle} // => optional (obj)
+  titleStyle={objStyle} // => Object (optional)
 
   // Объект стилей для описания
-  descriptionStyle={objStyle} // => optional (obj)
+  descriptionStyle={objStyle} // => Object (optional)
 />

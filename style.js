@@ -2,15 +2,13 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
 	wrapper: {
-		paddingTop: 100,
+		justifyContent: 'center',
+		alignItems: 'center',
 		height: '100%',
-		paddingHorizontal: 20,
 	},
-	title: {
+	text: {
 		textAlign: 'center',
-		fontSize: 20,
+		fontSize: 40,
 		fontWeight: '600',
-		marginBottom: 10,
-		marginTop: 20,
 	},
 });

@@ -9,33 +9,33 @@
 ```jsx
 
 <CheckBox
-  // Заголовок чекбокса (string)
-  title={'Заголовок'} // => optional
+  // Заголовок чекбокса
+  title={'Заголовок'} // => String (optional)
 
-  // Состояние чекбокса (bool)
-  checked={false} // => optional
+  // Состояние чекбокса
+  checked={false} // => Boolean (optional)
 
-  // чекбокс не активен и на него нельзя кликнуть
-  disabled={false}
+  // Чекбокс не активен и на него нельзя кликнуть
+  disabled={false} // => Boolean (optional)
 
-  // svg иконка (jsx)
-  svhIcon={svg} // => optional
+  // Svg иконка
+  svhIcon={svg} // => Jsx (optional)
 
-  // функция которая отработает при состоянии checked (function)
-  onPressChecked={function} // => optional
+  // Функция которая отработает при состоянии checked
+  onPressChecked={function} // => Function (optional)
 
-  // функция которая отработает при состоянии not checked (function)
-  onPressNotChecked={function} // => optional
+  // Функция которая отработает при состоянии not checked
+  onPressNotChecked={function} // => Function (optional)
 
-  // объект стилей для заголовка (obj)
-  titleStyle={objStyle} // => optional
+  // Объект стилей для заголовка
+  titleStyle={objStyle} // => Object (optional)
 
-  // объект стилей при состоянии checked (obj)
-  activeCheckedStyle={objStyle} // => optional
+  // Объект стилей при состоянии checked
+  activeCheckedStyle={objStyle} // => Object (optional)
 
-  // объект стилей при состоянии checked (obj)
-  activeCheckedStyle={objStyle } // => optional
+  // Объект стилей при состоянии checked
+  activeCheckedStyle={objStyle } // => Object (optional)
 
-  // объект стилей для обертки (obj)
-  checkboxInnerStyle={objStyle} // => optional
+  // Объект стилей для чекбокса
+  checkboxInnerStyle={objStyle} // => Object (optional)
 />

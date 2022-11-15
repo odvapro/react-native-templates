@@ -1,11 +1,8 @@
 import React from 'react';
-import { Text, Image, Pressable } from 'react-native';
+import { Text, Image, Pressable, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
 export const Button = ({
-	onPressIn,
-	onPressOut,
-	onLongPress,
 	onPress,
 	styleBtn,
 	styleText,
@@ -13,18 +10,19 @@ export const Button = ({
 	disabled,
 	icon,
 	iconStyle,
+	activeOpacity = 0.2,
+	...props
 }) => {
 	return (
-		<Pressable
-			style={styles.container}
+		<TouchableOpacity
+			style={[styles.container, styleBtn]}
 			disabled={disabled}
 			onPress={onPress}
-			onPressIn={onPressIn}
-			onPressOut={onPressOut}
-			onLongPress={onLongPress}
+			activeOpacity={activeOpacity}
+			{...props}
 		>
 			{icon && <Image style={[iconStyle]} source={icon} />}
 			<Text style={[styles.text, styleText]}>{text}</Text>
-		</Pressable>
+		</TouchableOpacity>
 	);
 };
