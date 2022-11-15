@@ -32,6 +32,8 @@ const Toast = forwardRef(
 					return <SuccessCircleSvg width={width} height={height} />;
 				case 'error':
 					return <ErrorCircleSvg width={width} height={height} />;
+				case 'info':
+					return <InfoCircleSvg width={width} height={height} />;
 				default:
 					return <InfoCircleSvg width={width} height={height} />;
 			}
