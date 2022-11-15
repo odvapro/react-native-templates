@@ -1,13 +1,10 @@
 # Button
 
-<div>
-  <img src="./screenshots/iOS button.png" alt="iOS buttons screenshot" width="325">
-  <img src="./screenshots/Android button.png" alt="Android buttons screenshot" width="325">
-</div>
+| IOS | Android |
+| --- | ------- |
+| <img src="./screenshots/iOS button.png" alt="iOS buttons screenshot" width="325"> | <img src="./screenshots/Android button.png" alt="Android buttons screenshot" width="325"> |
 
-## Примеры
-
-###  Вызов
+## Пример
 
 Компонент *Button* поддерживает все основные параметры TouchableOpacity
 ```jsx
